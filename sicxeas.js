@@ -1,4 +1,4 @@
-import { assembler_out } from './snippets/sicxeas-df0b7d870e6d0228/website/for-rust.js';
+import { listing_out, object_out } from './snippets/sicxeas-df0b7d870e6d0228/website/for-rust.js';
 
 let wasm;
 
@@ -145,13 +145,24 @@ async function __wbg_load(module, imports) {
 function __wbg_get_imports() {
     const imports = {};
     imports.wbg = {};
-    imports.wbg.__wbg_assembler_out_2633ffd2724ca9ae = function(arg0, arg1) {
+    imports.wbg.__wbg_listing_out_d1ecf44189189689 = function(arg0, arg1) {
         let deferred0_0;
         let deferred0_1;
         try {
             deferred0_0 = arg0;
             deferred0_1 = arg1;
-            assembler_out(getStringFromWasm0(arg0, arg1));
+            listing_out(getStringFromWasm0(arg0, arg1));
+        } finally {
+            wasm.__wbindgen_free(deferred0_0, deferred0_1, 1);
+        }
+    };
+    imports.wbg.__wbg_object_out_76c8e2a14776acfa = function(arg0, arg1) {
+        let deferred0_0;
+        let deferred0_1;
+        try {
+            deferred0_0 = arg0;
+            deferred0_1 = arg1;
+            object_out(getStringFromWasm0(arg0, arg1));
         } finally {
             wasm.__wbindgen_free(deferred0_0, deferred0_1, 1);
         }

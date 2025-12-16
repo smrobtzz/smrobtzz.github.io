@@ -3,7 +3,8 @@ import init, { main_js } from './sicxeas.js';
 init();
 
 const input = document.getElementById('input');
-const output = document.getElementById('output');
+const listing = document.getElementById('listing');
+const object = document.getElementById('object');
 var file_name = "";
 
 const examples_row = document.getElementById('examples-row');
@@ -27,10 +28,12 @@ for (const example of examples) {
 const errors = document.getElementById('errors');
 input.value = "";
 errors.value = "";
-output.value = "";
+listing.value = "";
+object.value = "";
 
 const assemble_btn = document.getElementById('assemble');
 assemble_btn.addEventListener('click', function() {
-  output.value = "";
+  listing.value = "";
+  object.value = "";
   errors.value = main_js(file_name, input.value);
 });
