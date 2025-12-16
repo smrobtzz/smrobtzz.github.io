@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>sicxeas demo</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="column">
+            <div id="examples-row" class="row"></div>
+            <div>
+                <div class="row">
+                    <div class="named-textarea">
+                        <p style="margin-top: 0px; margin-bottom: 0px">
+                            Input Code:
+                        </p>
+                        <textarea
+                            id="input"
+                            style="height: 400px; width: 600px"
+                        >
+                        </textarea>
+                    </div>
+
+                    <button id="assemble" style="height: 20px">Assemble</button>
+
+                    <div class="named-textarea">
+                        <p style="margin-top: 0px; margin-bottom: 0px">
+                            Assembler Output:
+                        </p>
+                        <textarea
+                            id="output"
+                            style="height: 400px; width: 650px"
+                            readonly
+                        >
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p style="margin-top: 0px; margin-bottom: 0px">
+                    Assembler Errors:
+                </p>
+                <textarea style="width: 99%" id="errors" readonly> </textarea>
+            </div>
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
